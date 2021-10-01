@@ -1,12 +1,10 @@
-# Project-004 : Phonebook Application (Python Flask) deployed on AWS Application Load Balancer with Auto Scaling and Relational Database Service using AWS Cloudformation
+# Phonebook Application (Python Flask) deployed on AWS Application Load Balancer with Auto Scaling and Relational Database Service using AWS Cloudformation
 
 ## Description
 
 The Phonebook Application aims to create a phonebook application in Python and deployed as a web application with Flask on AWS Application Load Balancer with Auto Scaling Group of Elastic Compute Cloud (EC2) Instances and Relational Database Service (RDS) using AWS Cloudformation Service.
 
 ## Problem Statement
-
-![Project_004](003_phonebook.png)
 
 - Your company has recently started a project that aims to serve as phonebook web application. You and your colleagues have started to work on the project. Your teammates have developed the UI part the project as shown in the template folder and they need your help to develop the coding part and deploying the app in development environment.
 
@@ -31,7 +29,7 @@ Input in username field          Format to convert
 --------------                   -----------------
 ''                               Warning -> 'Invalid input: Name can not be empty'
 callahan                         Callahan
-joHn doE                         John Doe
+joHn KeLy                        John Kely
 62267                            Warning -> 'Invalid input: Name of person should be text'
 
 Input in number field            Format to convert
@@ -39,7 +37,7 @@ Input in number field            Format to convert
 ''                               Warning -> 'Invalid input: Phone number can not be empty'
 1234567890                       1234567890
 546347                           546347
-thousand                         Warning -> 'Invalid input: Phone number should be in numeric format'
+hundred                         Warning -> 'Invalid input: Phone number should be in numeric format'
 ```
 
 - As a second step, you are requested to deploy your web application using Python's Flask framework.
@@ -111,20 +109,17 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 ## Project Skeleton 
 
 ```text
-004-phonebook-web-application (folder)
+AWS_Phonebook-Application (folder)
 |
-|----readme.md         # Given to the students (Definition of the project)
-|----cfn-template.yml   # To be delivered by students (Cloudformation template)
-|----app.py            # Given to the students (Python Flask Web Application)
+|----readme.md           # Definition of the project
+|----phonebook-app.yml   # Cloudformation template
+|----phonebook-app.py    # Python Flask Web Application
 |----templates
-        |----index.html      # Given to the students (HTML template)
-        |----add-update.html # Given to the students (HTML template)
-        |----delete.html     # Given to the students (HTML template)
+        |----index.html      # HTML template
+        |----add-update.html # HTML template
+        |----delete.html     # HTML template
 ```
 
-## Expected Outcome
-
-![Phonebook App Search Page](./search-snapshot.png)
 
 ### At the end of the project, following topics are to be covered;
 
@@ -157,44 +152,6 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 - AWS Cloudformation Template Design
 
 - Git & Github for Version Control System
-
-### At the end of the project, students will be able to;
-
-
-- configure connection to the `MySQL` database.
-
-- work with a database using the SQL within Flask application.
-
-- demonstrate bash scripting skills using `user data` section within launch template in Cloudformation to install and setup web application on EC2 Instance.
-
-- demonstrate their configuration skills of AWS EC2 Launch Templates, Application Load Balancer, ALB Target Group, ALB Listener, Auto Scaling Group, RDS and Security Groups.
-
-- configure Cloudformation template to use AWS Resources.
-
-- show how to use AWS Cloudformation Service to launch stacks.
-
-- apply git commands (push, pull, commit, add etc.) and Github as Version Control System.
-
-## Steps to Solution
-  
-- Step 1: Download or clone project definition from `clarusway` repo on Github 
-
-- Step 2: Prepare developer's app for production environment
-
-- Step 3: Prepare a cloudformation template to deploy your app on Application Load Balancer together with RDS
-
-- Step 4: Push your application into your own public repo on Github
-
-- Step 5: Deploy your application on AWS Cloud using Cloudformation template to showcase your app
-
-## Notes
-
-- Use the template formatting library `jinja` within Flask framework to leverage from given templates.
-
-- Use given app and html templates to warn user with invalid inputs.
-
-- Customize the application by hard-coding your name for the `developer_name` variable within html templates.
-
 
 ## Resources
 
