@@ -11,8 +11,8 @@ db_endpoint = open("/home/ec2-user/dbserver.endpoint", 'r', encoding='UTF-8')
 
 app.config['MYSQL_DATABASE_HOST'] = db_endpoint.readline().strip()
 app.config['MYSQL_DATABASE_USER'] = 'admin'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Mirana_1'
-app.config['MYSQL_DATABASE_DB'] = 'clarusway_phonebook'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'passwd'
+app.config['MYSQL_DATABASE_DB'] = 'my_phonebook'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 db_endpoint.close()
 mysql = MySQL()
@@ -21,12 +21,12 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-# Write a function named `init_phonebook_db` create phonebook table within clarusway_phonebook db, if it doesn't exist
+# Write a function named `init_phonebook_db` create phonebook table within my_phonebook db, if it doesn't exist
 
 
 def init_phonebook_db():
     phonebook_table = """
-    CREATE TABLE IF NOT EXISTS clarusway_phonebook.phonebook(
+    CREATE TABLE IF NOT EXISTS my_phonebook.phonebook(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     number VARCHAR(100) NOT NULL,
