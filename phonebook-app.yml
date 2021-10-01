@@ -76,8 +76,8 @@ Resources:
               pip3 install flask
               pip3 install flask_mysql
               echo "${MyDBURI}" > /home/ec2-user/dbserver.endpoint
-              TOKEN="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"
-              FOLDER="https://$TOKEN@raw.githubusercontent.com/MiranaSGit/MyAWS_Projects/main/aws/projects/Project-004-Phonebook-Application/"
+              TOKEN="YOUR GITHUB TOKEN HERE"
+              FOLDER="https://$TOKEN@raw.githubusercontent.com/MiranaSGit/AWS_Phonebook-Application/master/"
               curl -s --create-dirs -o "/home/ec2-user/templates/index.html" -L "$FOLDER"templates/index.html
               curl -s --create-dirs -o "/home/ec2-user/templates/add-update.html" -L "$FOLDER"templates/add-update.html
               curl -s --create-dirs -o "/home/ec2-user/templates/delete.html" -L "$FOLDER"templates/delete.html
@@ -147,14 +147,14 @@ Resources:
       AutoMinorVersionUpgrade: true
       BackupRetentionPeriod: 0
       DBInstanceIdentifier: mirana-db
-      DBName: clarusway_phonebook
+      DBName: my_phonebook
       DBSecurityGroups:
         - !Ref MyDBSecurityGroup
       Engine: MySQL
       DBInstanceClass: db.t2.micro
       EngineVersion: 8.0.19
       MasterUsername: admin
-      MasterUserPassword: Mirana_1
+      MasterUserPassword: # passwd
       Port: 3306
       PubliclyAccessible: true
 
